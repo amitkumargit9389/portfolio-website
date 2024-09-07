@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>HTML DOM Events</h1>
+<h2>The target Property</h2>
+
+<p>Click on any elements in this document to find out which element triggered the onclick event.</p>
+
+<button>This is a button</button>
+
+<p id="demo"></p>
+
+
+    
+</body>
+<script>
+    document.body.addEventListener("click",myFunction);
+function myFunction(event) { 
+  let text = event.target.nodeName;
+  document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+</html>
